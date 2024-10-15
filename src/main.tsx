@@ -9,11 +9,11 @@ import MoviesPage from "./pages/MoviesPage";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     {" "}
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter>
       <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="/movies" element={<MoviesPage />} />
-        <Route path="/list" element={<ListPage />} />
+        <Route path="/matchflix" element={<HomePage />} />
+        <Route path="/matchflix/movies" element={<MoviesPage />} />
+        <Route path="/matchflix/list" element={<ListPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
