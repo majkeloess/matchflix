@@ -1,20 +1,20 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, createHashRouter } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import MoviesPage from "../pages/MoviesPage";
 import ListPage from "../pages/ListPage";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
-    path: "/matchflix/",
+    path: "/",
     element: <HomePage />,
     children: [],
   },
   {
-    path: "/matchflix/movies",
+    path: "/movies",
     element: <MoviesPage />,
   },
   {
-    path: "/matchflix/list",
+    path: "/list",
     element: <ListPage />,
   },
 ]);
