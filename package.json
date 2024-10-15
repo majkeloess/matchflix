@@ -1,5 +1,6 @@
 {
   "name": "matchflix",
+  "homepage": "https://majkeloess.github.io/matchflix",
   "private": true,
   "version": "0.0.0",
   "type": "module",

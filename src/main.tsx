@@ -8,7 +8,6 @@ import MoviesPage from "./pages/MoviesPage";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    {" "}
     <BrowserRouter>
       <Routes>
         <Route path="/matchflix" element={<HomePage />} />
