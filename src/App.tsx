@@ -1,11 +1,7 @@
-import "./App.css";
-
-function App() {
+export default function App() {
   return (
     <>
-      <div>matchflix</div>
+      <div className=" text-4xl">matchflix</div>
     </>
   );
 }
-
-export default App;
