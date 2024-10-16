@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        bl: 'rgb(12, 2, 185)',
+        pk: '#ff75c3',
+      },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         ubuntu: ['Ubuntu', 'sans-serif'],

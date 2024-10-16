@@ -1,8 +1,9 @@
 import { TEXT } from "../constants/text";
-
+import MatchflixLogoSvg from "./MatchflixLogoSvg";
 function Logo() {
   return (
-    <div className="flex flex-row items-center gap-1">
+    <div className="flex flex-row items-center gap-4">
+      <MatchflixLogoSvg />
       <h1 className="text-6xl font-ubuntu font-medium text-white">
         {TEXT.appName}
       </h1>
