@@ -1,3 +1,64 @@
+@import "./font.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg {
+  background: radial-gradient(
+      at 81.14224137931035% 56.000000635782875%,
+      hsla(225.00000000000003, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 74.67672413793103% 24.74999745686849%,
+      hsla(240, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 52.80172413793104% 65.16666730244954%,
+      hsla(127.00000000000001, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 1.1853448275862069% 13.708330790201822%,
+      hsla(18, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 60.021551724137936% 13.083333969116213%,
+      hsla(279.0000000000001, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 81.68103448275862% 4.125000635782878%,
+      hsla(240, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 75.21551724137932% 69.95833079020183%,
+      hsla(84.00000000000001, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 0% 64.95833396911621%,
+      hsla(243.20920012718017, 98.19641264493112%, 36.660602999999995%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 3.9870689655172415% 89.95833396911621%,
+      hsla(243.27868852459014, 97.86096256684492%, 36.666666666666664%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 22.306034482758623% 36.41666730244955%,
+      hsla(171.00000000000003, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 5.064655172413793% 39.54166730244955%,
+      hsla(124.00000000000001, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    #ff75c3;
+}
