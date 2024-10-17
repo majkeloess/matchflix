@@ -6,4 +6,6 @@ export const TEXT = {
   landingSmaller:
     "Matchflix is movie finder which helps you quickly discover your next favorite film. Our app works similarly to Tinder, allowing you to seamlessly swipe through movies. Don't miss out on the latest and greatest films.",
   landingButton: "Start swiping now!",
+  errorMain: "Not found!",
+  errorCode: "404",
 };
