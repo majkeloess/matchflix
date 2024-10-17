@@ -3,6 +3,21 @@ import LandingPage from "../../../pages/LandingPage";
 import { TEXT } from "../../../constants/text";
 
 describe("LandingPage component", () => {
+  it("should render Logo component correctly", () => {
+    render(<LandingPage />);
+    expect(screen.getByTestId("logo")).toBeInTheDocument();
+  });
+
+  it("should render Button component correctly", () => {
+    render(<LandingPage />);
+    expect(screen.getByTestId("button")).toBeInTheDocument();
+  });
+
+  it("should render LandingGrid component correctly", () => {
+    render(<LandingPage />);
+    expect(screen.getByTestId("landing-grid")).toBeInTheDocument();
+  });
+
   it("should render gradient part of text correctly", () => {
     render(<LandingPage />);
     expect(

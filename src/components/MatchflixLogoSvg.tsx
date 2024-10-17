@@ -3,6 +3,7 @@ import React from "react";
 function MatchflixLogoSvg() {
   return (
     <svg
+      data-testid="matchflix-logo-svg"
       fill="#FFFFFF"
       height="70px"
       width="70px"
