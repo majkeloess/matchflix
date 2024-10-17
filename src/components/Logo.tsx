@@ -1,5 +1,5 @@
 import { TEXT } from "../constants/text";
-import MatchflixLogoSvg from "./MatchflixLogoSvg";
+import MatchflixLogoSvg from "../assets/svg/MatchflixLogoSvg";
 function Logo() {
   return (
     <div data-testid="logo" className="flex flex-row items-center gap-4">
