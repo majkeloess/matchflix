@@ -3,7 +3,10 @@ import ListItem from "./ListItem";
 
 function ListList() {
   return (
-    <ul className="flex flex-col gap-10">
+    <ul
+      data-testid="list"
+      className="flex flex-col lg:grid lg:grid-cols-2 xl:grid-cols-3 gap-10"
+    >
       <ListItem data={data[0]} />
       <ListItem data={data[1]} />
       <ListItem data={data[0]} />
