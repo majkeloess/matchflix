@@ -8,7 +8,7 @@ function MoviesPage() {
     <PageWrapper>
       <div className="flex flex-col h-[100%]">
         <section className="py-5 px-10 flex justify-center">
-          <div className="relative rounded-2xl overflow-hidden border-pk border-4">
+          <div className="rounded-2xl overflow-hidden border-pk border-4">
             <img
               src={data[0].imageURL}
               alt="poster"
@@ -17,7 +17,7 @@ function MoviesPage() {
           </div>
         </section>
         <section>
-          <MoviesText />
+          <MoviesText data={data[0]} />
         </section>
         <section className="py-5">
           <MoviesControls />

@@ -8,4 +8,5 @@ export const TEXT = {
   landingButton: "Start swiping now!",
   errorMain: "Not found!",
   errorCode: "404",
+  listMain: "Your watch list",
 };

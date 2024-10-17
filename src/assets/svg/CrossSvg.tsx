@@ -3,7 +3,6 @@ import React from "react";
 function CrossSvg() {
   return (
     <svg
-      opacity={0.8}
       width="40px"
       height="40px"
       viewBox="0 0 25 25"
