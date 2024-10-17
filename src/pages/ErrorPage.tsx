@@ -1,11 +1,11 @@
 import PageWrapper from "../components/PageWrapper";
 
-function ListPage() {
+function ErrorPage() {
   return (
     <PageWrapper>
-      <div>List page</div>
+      <div>ErrorPage</div>
     </PageWrapper>
   );
 }
 
-export default ListPage;
+export default ErrorPage;
