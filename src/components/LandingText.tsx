@@ -19,7 +19,7 @@ function LandingText() {
         </p>
       </div>
       <div className="py-5">
-        <Button text={TEXT.landingButton} />
+        <Button text={TEXT.landingButton} redirect="/movies" />
       </div>
     </>
   );

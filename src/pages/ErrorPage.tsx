@@ -12,7 +12,7 @@ function ErrorPage() {
             {TEXT.errorCode}
           </span>
         </h1>
-        <Button text="Go back to main page!" />
+        <Button text="Go back to main page!" redirect="/" />
       </div>
     </PageWrapper>
   );
