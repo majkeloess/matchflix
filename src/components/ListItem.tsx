@@ -6,7 +6,7 @@ function ListItem({ data }: { data: MovieType }) {
       data-testid="list-item"
       className="flex flex-row gap-4 md:gap-10 bg-white/25 p-4 md:p-10 rounded-xl border-4 border-pk"
     >
-      <div className="rounded-2xl lg:w-[20dvw] lg:min-w-[20dvw] xl:w-[15dvw] xl:min-w-[15dvw] w-[30dvw] min-w-[30dvw] max-h-[20dvh] overflow-hidden ">
+      <div className="rounded-2xl lg:w-[20dvw] lg:min-w-[20dvw] xl:w-[15dvw] xl:min-w-[15dvw] w-[30dvw] min-w-[30dvw] max-h-[20dvh] xl:min-h-[45vh]  overflow-hidden ">
         <img
           src={data.imageURL}
           alt="poster"
