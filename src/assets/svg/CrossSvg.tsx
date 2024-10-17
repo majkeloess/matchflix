@@ -3,12 +3,13 @@ import React from "react";
 function CrossSvg() {
   return (
     <svg
-      width="55px"
-      height="55px"
+      opacity={0.8}
+      width="40px"
+      height="40px"
       viewBox="0 0 25 25"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      fill="#000000"
+      fill="#FFFFFF"
     >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
@@ -31,7 +32,7 @@ function CrossSvg() {
           <g
             id="Icon-Set"
             transform="translate(-467.000000, -1039.000000)"
-            fill="#000000"
+            fill="#B22222"
           >
             {" "}
             <path
