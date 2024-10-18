@@ -2,18 +2,17 @@ import { MovieType } from "../constants/types";
 
 function ListItem({ data }: { data: MovieType }) {
   return (
-    <li
-      data-testid="list-item"
-      className="flex flex-row gap-4 md:gap-10 bg-white/25 p-4 md:p-10 rounded-xl border-4 border-pk"
-    >
-      <div className="rounded-2xl lg:w-[20dvw] lg:min-w-[20dvw] xl:w-[15dvw] xl:min-w-[15dvw] w-[30dvw] min-w-[30dvw] max-h-[20dvh] xl:min-h-[45vh]  overflow-hidden ">
-        <img
-          src={data.imageURL}
-          alt="poster"
-          className="w-full h-full object-cover"
-        />
+    <div className="flex xl:flex-row flex-col px-16 py-10 w-full gap-8 justify-center">
+      <div className="w-1/3">
+        <div className="rounded-2xl overflow-hidden w-40 h-60">
+          <img
+            src={data.imageURL}
+            alt="poster"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 w-2/3">
         <p className="text-white font-roboto font-medium text-2xl md:text-4xl leading-8">
           <span className="bg-gradient-to-r from-pink-200 via-pink-400 to-pink-500 bg-clip-text text-transparent">
             {data.title}
@@ -23,7 +22,7 @@ function ListItem({ data }: { data: MovieType }) {
           {data.genre}
         </p>
       </div>
-    </li>
+    </div>
   );
 }
 

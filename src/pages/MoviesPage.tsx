@@ -1,28 +1,22 @@
-import MoviesControls from "../components/MoviesControls";
-import MoviesText from "../components/MoviesText";
 import PageWrapper from "../components/PageWrapper";
-import { data } from "../constants/exampleData";
+import { TEXT } from "../constants/text";
+import SwipeArea from "../components/SwipeArea";
+import ListList from "../components/ListList";
 
 function MoviesPage() {
   return (
     <PageWrapper>
-      <div className="flex flex-col xl:flex-row h-[100%]  justify-center">
-        <section className="py-5 md:py-10 px-10 flex justify-center">
-          <div className="rounded-2xl w-[60dvw] md:w-[55dvw] xl:max-h-[80dvh] xl:max-w-[50dvh] overflow-hidden border-pk border-4">
-            <img
-              src={data[1].imageURL}
-              alt="poster"
-              className="w-full h-full object-cover"
-            />
+      <div className="py-5">
+        <div className="flex flex-row justify-center items-center md:h-[80dvh]">
+          <div className="xl:w-1/2">
+            <SwipeArea />
           </div>
-        </section>
-        <div>
-          <section className="xl:py-10">
-            <MoviesText data={data[0]} />
-          </section>
-          <section className="py-5">
-            <MoviesControls />
-          </section>
+          <div className="hidden xl:block xl:w-1/2 h-[60dvh] px-10">
+            <h1 className="text-white font-poppins font-semibold text-3xl pb-5 text-center">
+              {TEXT.listMain}
+            </h1>
+            <ListList />
+          </div>
         </div>
       </div>
     </PageWrapper>
