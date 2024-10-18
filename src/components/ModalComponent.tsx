@@ -1,6 +1,5 @@
 import { Modal } from "flowbite-react";
 import { MovieType } from "../constants/types";
-import ArrowSvg from "../assets/svg/ArrowSvg";
 
 function ModalComponent({
   openModal,
