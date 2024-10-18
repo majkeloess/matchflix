@@ -5,7 +5,7 @@ export const data = [
       "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUzNTE2NTkzMV5BMl5BanBnXkFtZTgwMDAzOTUyMDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
     title: "Inferno",
     summary:
-      "Famous symbologist Robert Langdon follows a trail of clues tied to Dante...",
+      "Inferno opens on the evening of Good Friday in the year 1300. Traveling through a dark wood, Dante Alighieri has lost his path and now wanders fearfully through the forest. The sun shines down on a mountain above him, and he attempts to climb up to it but finds his way blocked by three beasts—a leopard, a lion, and a she-wolf. Frightened and helpless, Dante returns to the dark wood. Here he encounters the ghost of Virgil, the great Roman poet, who has come to guide Dante back to his path, to the top of the mountain. Virgil says that their path will take them through Hell and that they will eventually reach Heaven, where Dantes beloved Beatrice awaits. He adds that it was Beatrice, along with two other holy women, who, seeing Dante lost in the wood, sent Virgil to guide him.",
     rating: 5.3,
     genre: "Thriller",
   },

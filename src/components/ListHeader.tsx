@@ -9,7 +9,7 @@ function ListHeader() {
         {TEXT.listMain}
       </h1>
       <Link to="/movies">
-        <ArrowSvg />
+        <ArrowSvg color="#FFFFFF" />
       </Link>
     </div>
   );

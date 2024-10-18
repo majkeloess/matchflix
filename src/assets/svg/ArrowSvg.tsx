@@ -1,9 +1,9 @@
 import React from "react";
 
-function ArrowSvg() {
+function ArrowSvg({ color }: { color: string }) {
   return (
     <svg
-      fill="#FFFFFF"
+      fill={color}
       height="40px"
       width="40px"
       version="1.1"
