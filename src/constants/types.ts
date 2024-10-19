@@ -24,12 +24,16 @@ export type MovieType = {
 };
 
 export type MoviesContextType = {
-  last: string | null;
-  setLast: React.Dispatch<React.SetStateAction<string | null>>;
+  last: MovieType | null;
+  setLast: React.Dispatch<React.SetStateAction<MovieType | null>>;
   queryGenre: string;
   setQueryGenre: React.Dispatch<React.SetStateAction<string>>;
   userList: MovieType[];
   setUserList: React.Dispatch<React.SetStateAction<MovieType[]>>;
-  current: number;
-  setCurrent: React.Dispatch<React.SetStateAction<number>>;
+  movies: MovieType[];
+  setMovies: React.Dispatch<React.SetStateAction<MovieType[]>>;
+  current: MovieType | null;
+  setCurrent: React.Dispatch<React.SetStateAction<MovieType | null>>;
+  numMovies: number;
+  setNumMovies: React.Dispatch<React.SetStateAction<number>>;
 };

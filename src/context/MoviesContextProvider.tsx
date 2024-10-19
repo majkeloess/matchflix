@@ -3,14 +3,20 @@ import { MoviesContext } from "./MoviesContext";
 import { MovieType } from "../constants/types";
 
 function MoviesContextProvider({ children }: { children: React.ReactNode }) {
-  const [last, setLast] = useState<string | null>(null);
+  const [last, setLast] = useState<MovieType | null>(null);
+  const [current, setCurrent] = useState<MovieType | null>(null);
   const [queryGenre, setQueryGenre] = useState<string>("all");
+  const [movies, setMovies] = useState<MovieType[]>([]);
   const [userList, setUserList] = useState<MovieType[]>([]);
-  const [current, setCurrent] = useState<number>(0);
+  const [numMovies, setNumMovies] = useState<number>(0);
 
   return (
     <MoviesContext.Provider
       value={{
+        movies,
+        setMovies,
+        numMovies,
+        setNumMovies,
         last,
         setLast,
         queryGenre,

@@ -1,32 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { fetchMovies } from "../utils/fetch";
-import { MovieType } from "../constants/types";
 import { useMoviesContext } from "./useMoviesContext";
+import { getRandom } from "../utils/rand";
 
 export const useMovies = () => {
-  const { queryGenre } = useMoviesContext();
-
-  const [movies, setMovies] = useState<MovieType[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const { queryGenre, setCurrent, setNumMovies, setMovies } =
+    useMoviesContext();
 
   useEffect(() => {
     const getMovies = async () => {
-      setLoading(true);
       try {
         const data = await fetchMovies(queryGenre);
         setMovies(data);
-        setError(null);
+        setNumMovies(data.length);
+        setCurrent(data[getRandom(data.length - 1)]);
       } catch (error) {
-        setError("Failed to fetch movies");
         console.log(error);
-      } finally {
-        setLoading(false);
       }
     };
 
     getMovies();
   }, [queryGenre]);
-
-  return { movies, loading, error };
 };
