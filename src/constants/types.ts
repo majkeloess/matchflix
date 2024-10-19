@@ -22,3 +22,12 @@ export type MovieType = {
   rating: number;
   genre: Genre;
 };
+
+export type MoviesContextType = {
+  last: string | null;
+  setLast: React.Dispatch<React.SetStateAction<string | null>>;
+  queryGenre: Genre | "all";
+  setQueryGenre: React.Dispatch<React.SetStateAction<Genre | "all">>;
+  userList: MovieType[];
+  setUserList: React.Dispatch<React.SetStateAction<MovieType[]>>;
+};
