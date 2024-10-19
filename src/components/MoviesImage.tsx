@@ -1,8 +1,8 @@
-import { MovieType } from "../constants/types";
 import { useState } from "react";
 import ModalComponent from "./ModalComponent";
+import { data } from "../constants/exampleData";
 
-function MoviesImage({ data }: { data: MovieType }) {
+function MoviesImage() {
   const [openModal, setOpenModal] = useState(false);
 
   return (
@@ -12,14 +12,14 @@ function MoviesImage({ data }: { data: MovieType }) {
       className="rounded-2xl w-[60dvw] md:w-[40dvw] xl:max-h-[50dvh] xl:max-w-[30dvh] overflow-hidden border-pk border-4"
     >
       <img
-        src={data.imageURL}
+        src={data[0].imageURL}
         alt="poster"
         className="w-full h-full object-cover"
       />
       <ModalComponent
         openModal={openModal}
         setOpenModal={setOpenModal}
-        data={data}
+        data={data[0]}
       />
     </div>
   );

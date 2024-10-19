@@ -1,5 +1,14 @@
 import { MovieType } from "./types";
 
+export const mockData: MovieType = {
+  id: "2ddd999",
+  title: "Inception",
+  genre: "Science Fiction",
+  imageURL: "test-file-stub",
+  summary: "Lorem",
+  rating: 1.2,
+};
+
 export const data: MovieType[] = [
   {
     id: "278",

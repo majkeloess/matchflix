@@ -1,17 +1,16 @@
 import MoviesControls from "../components/MoviesControls";
 import MoviesText from "../components/MoviesText";
-import { data } from "../constants/exampleData";
 import MoviesImage from "./MoviesImage";
 
 function SwipeArea() {
   return (
-    <div className="flex flex-col h-[100%]">
+    <div data-testid="swipe-area" className="flex flex-col h-[100%]">
       <section className="px-10 flex justify-center">
-        <MoviesImage data={data[0]} />
+        <MoviesImage />
       </section>
       <div>
         <section className="py-5">
-          <MoviesText data={data[0]} />
+          <MoviesText />
         </section>
         <section className="py-5 xl:py-0">
           <MoviesControls />

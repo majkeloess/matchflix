@@ -1,15 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import ListItem from "../../../components/ListItem";
-import { MovieType } from "../../../constants/types";
-
-const mockData: MovieType = {
-  id: "2ddd999",
-  title: "Inception",
-  genre: "Science Fiction",
-  imageURL: "test-file-stub",
-  summary: "Lorem",
-  rating: 1.2,
-};
+import { mockData } from "../../../constants/exampleData";
 
 describe("ListItem Component", () => {
   it("should render list item", () => {
