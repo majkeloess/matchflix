@@ -2,7 +2,10 @@ import { MovieType } from "../constants/types";
 
 function ListItem({ data }: { data: MovieType }) {
   return (
-    <div className="flex md:flex-row flex-col px-16 py-10 w-full gap-8 justify-center">
+    <div
+      data-testid="list-item"
+      className="flex md:flex-row flex-col px-16 py-10 w-full gap-8 justify-center"
+    >
       <div>
         <div className="rounded-2xl overflow-hidden md:w-40 md:h-60  ">
           <img
