@@ -26,8 +26,10 @@ export type MovieType = {
 export type MoviesContextType = {
   last: string | null;
   setLast: React.Dispatch<React.SetStateAction<string | null>>;
-  queryGenre: Genre | "all";
-  setQueryGenre: React.Dispatch<React.SetStateAction<Genre | "all">>;
+  queryGenre: string;
+  setQueryGenre: React.Dispatch<React.SetStateAction<string>>;
   userList: MovieType[];
   setUserList: React.Dispatch<React.SetStateAction<MovieType[]>>;
+  current: number;
+  setCurrent: React.Dispatch<React.SetStateAction<number>>;
 };

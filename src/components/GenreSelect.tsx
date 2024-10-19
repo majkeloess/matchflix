@@ -1,8 +1,16 @@
 import { genres, TEXT } from "../constants/text";
+import { useMoviesContext } from "../hooks/useMoviesContext";
 
 function GenreSelect() {
+  const { setQueryGenre } = useMoviesContext();
+
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setQueryGenre(event.target.value);
+  };
+
   return (
     <select
+      onChange={handleSelectChange}
       data-testid="select"
       className="border-4 border-pk rounded-xl text-pk text-xl md:text-2xl font-roboto font-regular min-w-32 bg-white/20"
     >

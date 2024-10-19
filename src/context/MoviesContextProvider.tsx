@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { MoviesContext } from "./MoviesContext";
-import { Genre, MovieType } from "../constants/types";
+import { MovieType } from "../constants/types";
 
 function MoviesContextProvider({ children }: { children: React.ReactNode }) {
   const [last, setLast] = useState<string | null>(null);
-  const [queryGenre, setQueryGenre] = useState<Genre | "all">("all");
+  const [queryGenre, setQueryGenre] = useState<string>("all");
   const [userList, setUserList] = useState<MovieType[]>([]);
+  const [current, setCurrent] = useState<number>(0);
 
   return (
     <MoviesContext.Provider
@@ -16,6 +17,8 @@ function MoviesContextProvider({ children }: { children: React.ReactNode }) {
         setQueryGenre,
         userList,
         setUserList,
+        current,
+        setCurrent,
       }}
     >
       {children}
