@@ -1,4 +1,4 @@
-import { Genre, MovieType } from "./types";
+import { MovieType } from "./types";
 
 export const data: MovieType[] = [
   {
