@@ -1,5 +1,6 @@
 import { Modal } from "flowbite-react";
 import { MovieType } from "../constants/types";
+import { TEXT } from "../constants/text";
 
 function ModalComponent({
   openModal,
@@ -12,6 +13,7 @@ function ModalComponent({
 }) {
   return (
     <Modal
+      data-testid="modal"
       position={"center"}
       dismissible
       show={openModal}
@@ -19,7 +21,9 @@ function ModalComponent({
     >
       <Modal.Body className="border-4 border-black bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-fuchsia-600 via-fuchsia-400 to-fuchsia-200">
         <div className="space-y-6">
-          <p className="text-center font-roboto font-medium text-xl">Summary</p>
+          <p className="text-center font-roboto font-medium text-xl">
+            {TEXT.movieSummary}
+          </p>
           <p className="text-lg font-roboto font-light leading-relaxed text-black">
             {data.summary}
           </p>

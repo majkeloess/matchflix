@@ -1,3 +1,5 @@
+import { Genre } from "./types";
+
 export const TEXT = {
   appName: "matchflix",
   landingBigPart1: "Not sure what to watch today? Tired of endless ",
@@ -9,4 +11,22 @@ export const TEXT = {
   errorMain: "Not found!",
   errorCode: "404",
   listMain: "Your watch list",
+  movieAll: "All",
+  movieSummary: "Summary",
 };
+
+export const genres: Genre[] = [
+  "Action",
+  "Animation",
+  "Comedy",
+  "Drama",
+  "Romance",
+  "Thriller",
+  "War",
+  "Crime",
+  "History",
+  "Adventure",
+  "Horror",
+  "Family",
+  "Western",
+];

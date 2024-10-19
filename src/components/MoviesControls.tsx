@@ -3,17 +3,18 @@ import PlaySvg from "../assets/svg/PlaySvg";
 import BackSvg from "../assets/svg/BackSvg";
 import ListSvg from "../assets/svg/ListSvg";
 import { Link } from "react-router-dom";
+import GenreSelect from "./GenreSelect";
 
 function MoviesControls() {
   return (
-    <div className="flex flex-row justify-center gap-2 md:gap-8  xl:gap-4 items-center">
+    <div
+      data-testid="movies-controls"
+      className="flex flex-row justify-center gap-2 md:gap-8  xl:gap-4 items-center">
       <div className="bg-white/20 h-20 w-20 md:h-24 md:w-24 rounded-full flex justify-center items-center border-pk border-4">
         <CrossSvg />
       </div>
       <div className="flex flex-col items-center gap-6">
-        <button className="border-4 border-pk rounded-xl text-white text-xl md:text-2xl font-roboto font-regular px-2 py-1 min-w-32 bg-white/20">
-          All
-        </button>
+        <GenreSelect />
         <div className="flex flex-row gap-2 xl:gap-0">
           <div className="bg-white/20 h-16 w-16 md:h-20 md:w-20 rounded-full flex justify-center items-center border-pk border-4">
             <BackSvg />

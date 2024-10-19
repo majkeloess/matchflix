@@ -3,7 +3,7 @@ import { MovieType } from "../constants/types";
 
 function MoviesText({ data }: { data: MovieType }) {
   return (
-    <div className="px-10">
+    <div data-testid="movies-text" className="px-10">
       <div className="flex flex-row items-center justify-between  xl:justify-center xl:gap-28">
         <div>
           <h2 className="text-white md:text-4xl text-2xl font-poppins font-semibold">
