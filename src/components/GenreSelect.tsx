@@ -10,7 +10,7 @@ function GenreSelect() {
         {TEXT.movieAll}
       </option>
       {genres.map((genre, id) => (
-        <option id={id.toString()} value={genre.toLowerCase()}>
+        <option key={id} value={genre.toLowerCase()}>
           {genre}
         </option>
       ))}
