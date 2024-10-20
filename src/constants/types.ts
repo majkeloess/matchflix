@@ -36,4 +36,8 @@ export type MoviesContextType = {
   setCurrent: React.Dispatch<React.SetStateAction<MovieType | null>>;
   numMovies: number;
   setNumMovies: React.Dispatch<React.SetStateAction<number>>;
+  showList: boolean;
+  setShowList: React.Dispatch<React.SetStateAction<boolean>>;
+  idBox: Set<string>;
+  setIdBox: React.Dispatch<React.SetStateAction<Set<string>>>;
 };

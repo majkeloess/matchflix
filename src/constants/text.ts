@@ -13,6 +13,7 @@ export const TEXT = {
   listMain: "Your watch list",
   movieAll: "All",
   movieSummary: "Summary",
+  movieOut: "You are out of cards. Filter by other genre.",
 };
 
 export const genres: Genre[] = [

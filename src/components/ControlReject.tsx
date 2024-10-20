@@ -1,16 +1,29 @@
 import CrossSvg from "../assets/svg/CrossSvg";
 import { useMoviesContext } from "../hooks/useMoviesContext";
-import { getRandom } from "../utils/rand";
+import { shuffleMovies } from "../utils/random";
 import { updateRecommendation } from "../utils/update";
 
 function ControlReject() {
-  const { current, setCurrent, setLast, movies, numMovies } =
+  const { current, setCurrent, setLast, movies, idBox, setIdBox } =
     useMoviesContext();
   const handleRejectRecommendation = async () => {
     if (current) {
       await updateRecommendation(current.id, false);
+
+      idBox.add(current.id);
+      setIdBox(idBox);
+
       setLast(current);
-      setCurrent(movies[getRandom(numMovies)]);
+
+      const shuffledMovies = shuffleMovies(movies);
+
+      setCurrent(null);
+      for (const el of shuffledMovies) {
+        if (!idBox.has(el.id)) {
+          setCurrent(el);
+          break;
+        }
+      }
     }
   };
 

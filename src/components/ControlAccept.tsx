@@ -1,23 +1,38 @@
 import PlaySvg from "../assets/svg/PlaySvg";
 import { useMoviesContext } from "../hooks/useMoviesContext";
-import { getRandom } from "../utils/rand";
+import { shuffleMovies } from "../utils/random";
 import { updateRecommendation } from "../utils/update";
 
 function ControlAccept() {
   const {
+    idBox,
+    setIdBox,
     current,
     setCurrent,
     setLast,
     movies,
-    numMovies,
     userList,
     setUserList,
   } = useMoviesContext();
   const handleAcceptRecommendation = async () => {
     if (current) {
       await updateRecommendation(current.id, true);
+
+      idBox.add(current.id);
+      setIdBox(idBox);
+
       setLast(current);
-      setCurrent(movies[getRandom(numMovies)]);
+
+      const shuffledMovies = shuffleMovies(movies);
+
+      setCurrent(null);
+      for (const el of shuffledMovies) {
+        if (!idBox.has(el.id)) {
+          setCurrent(el);
+          break;
+        }
+      }
+
       setUserList([...userList, current]);
     }
   };

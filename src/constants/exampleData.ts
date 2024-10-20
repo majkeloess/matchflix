@@ -291,15 +291,6 @@ export const data: MovieType[] = [
     genre: "Crime",
   },
   {
-    id: "10494",
-    imageURL: "https://image.tmdb.org/t/p/w500/6WTiOCfDPP8XV4jqfloiVWf7KHq.jpg",
-    title: "Perfect Blue",
-    summary:
-      "Encouraged by her managers, rising pop star Mima takes on a recurring role on a popular TV show, when suddenly her handlers and collaborators begin turning up murdered.",
-    rating: 8.3,
-    genre: "Animation",
-  },
-  {
     id: "92321",
     imageURL: "https://image.tmdb.org/t/p/w500/mDqzHV8UXWWNpZkoAbKmKX1ZxEE.jpg",
     title: "Hotarubi no Mori e",
@@ -557,7 +548,7 @@ export const data: MovieType[] = [
     title: "Oldboy",
     summary:
       "With no clue how he came to be imprisoned, drugged, and tortured for 15 years, a desperate man seeks revenge on his captors.",
-    rating: 8.255,
+    rating: 8.2,
     genre: "Thriller",
   },
   {
@@ -575,7 +566,7 @@ export const data: MovieType[] = [
     title: "Avengers: Endgame",
     summary:
       "After the devastating events of Avengers: Infinity War, the Avengers must assemble once more to undo Thanos' actions and restore order to the universe.",
-    rating: 8.25,
+    rating: 8.2,
     genre: "Action",
   },
   {
@@ -640,5 +631,159 @@ export const data: MovieType[] = [
       "A law student and an exuberant man go on a road trip through Italy, testing their newfound friendship along the way.",
     rating: 8.2,
     genre: "Comedy",
+  },
+  {
+    id: "280",
+    imageURL: "https://image.tmdb.org/t/p/w500/5M0j0B18abtBI5gi2RhfjjurTqb.jpg",
+    title: "Terminator 2: Judgment Day",
+    summary:
+      "Set ten years after the events of the original, James Cameron’s classic sci-fi action flick tells the story of a second attempt to get the rid of rebellion leader John Connor, this time targeting the boy himself. However, the rebellion has sent a reprogrammed terminator to protect Connor.",
+    rating: 8.1,
+    genre: "Action",
+  },
+  {
+    id: "19",
+    imageURL: "https://image.tmdb.org/t/p/w500/vZIJxGnjcswPCAa52jhbl01FQkV.jpg",
+    title: "Metropolis",
+    summary:
+      "In a futuristic city sharply divided between the rich and the poor, the son of the city's mastermind meets a prophet who predicts the coming of a savior to mediate their differences.",
+    rating: 8.1,
+    genre: "Drama",
+  },
+  {
+    id: "935",
+    imageURL: "https://image.tmdb.org/t/p/w500/7SixLzxcqezkZEYU8pcHZgbkmjp.jpg",
+    title:
+      "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+    summary:
+      "After the insane General Jack D. Ripper initiates a nuclear strike on the Soviet Union, a war room full of politicians, generals and a Russian diplomat all frantically try to stop the nuclear strike.",
+    rating: 8.1,
+    genre: "Comedy",
+  },
+  {
+    id: "843",
+    imageURL: "https://image.tmdb.org/t/p/w500/iYypPT4bhqXfq1b6EnmxvRt6b2Y.jpg",
+    title: "In the Mood for Love",
+    summary:
+      "In Hong Kong of 1962, Mrs. Chan and Mr. Chow, a journalist, move into neighbouring apartments on the same day. Their encounters are formal and polite—until a discovery about their respective spouses creates an intimate bond between them.",
+    rating: 8.1,
+    genre: "Romance",
+  },
+  {
+    id: "531428",
+    imageURL: "https://image.tmdb.org/t/p/w500/2LquGwEhbg3soxSCs9VNyh5VJd9.jpg",
+    title: "Portrait of a Lady on Fire",
+    summary:
+      "On an isolated island in Brittany at the end of the eighteenth century, a female painter is obliged to paint a wedding portrait of a young woman.",
+    rating: 8.1,
+    genre: "Drama",
+  },
+  {
+    id: "762975",
+    imageURL: "https://image.tmdb.org/t/p/w500/4JyNWkryifWbWXJyxcWh3pVya6N.jpg",
+    title: "Purple Hearts",
+    summary:
+      "An aspiring musician agrees to a marriage of convenience with a soon-to-deploy Marine, but a tragedy soon turns their fake relationship all too real.",
+    rating: 8.1,
+    genre: "Romance",
+  },
+  {
+    id: "38288",
+    imageURL: "https://image.tmdb.org/t/p/w500/y3hEulMYSTQuvmI5jBTyWrcvJQX.jpg",
+    title: "“The Shorts” by Aldo, Giovanni and Giacomo",
+    summary:
+      "I Corti ('Shorts') by Aldo, Giovanni & Giacomo was the first stage show of the comedy trio, with the participation of Marina Massironi. It was recorded live at the Teatro Nuovo in Ferrara on 28 and 29 March 1996.",
+    rating: 8.1,
+    genre: "Comedy",
+  },
+  {
+    id: "411088",
+    imageURL: "https://image.tmdb.org/t/p/w500/fptnZJbLzKUHeNlYrAynbyoL5YJ.jpg",
+    title: "The Invisible Guest",
+    summary:
+      "Barcelona, Spain. Adrián Doria, a young and successful businessman accused of murder, meets one night with Virginia Goodman, an expert interrogation lawyer, in order to devise a defense strategy.",
+    rating: 8.1,
+    genre: "Thriller",
+  },
+  {
+    id: "996",
+    imageURL: "https://image.tmdb.org/t/p/w500/bNCTRXJjPvVsh71nwo6kcFzUZvh.jpg",
+    title: "Double Indemnity",
+    summary:
+      "A rich woman and a calculating insurance agent plot to kill her unsuspecting husband after he signs a double indemnity policy.",
+    rating: 8.1,
+    genre: "Crime",
+  },
+  {
+    id: "666",
+    imageURL: "https://image.tmdb.org/t/p/w500/zJvp7XjQ2LhPbDVYhFXyucs40vR.jpg",
+    title: "Central Station",
+    summary:
+      "An emotional journey of a former school teacher, who writes letters for illiterate people, and a young boy, whose mother has just died, as they search for the father he never knew.",
+    rating: 8.1,
+    genre: "Drama",
+  },
+  {
+    id: "46738",
+    imageURL: "https://image.tmdb.org/t/p/w500/yDNrRBVewTdwyCxcg4ULuyHfHot.jpg",
+    title: "Incendies",
+    summary:
+      "A mother's last wishes send twins Jeanne and Simon on a journey to the Middle East in search of their tangled roots.",
+    rating: 8.1,
+    genre: "Drama",
+  },
+  {
+    id: "663558",
+    imageURL: "https://image.tmdb.org/t/p/w500/np4ScPY04HESKBbpexwstKsipKe.jpg",
+    title: "New Gods: Nezha Reborn",
+    summary:
+      "While living as an ordinary deliveryman and motor racing fan, Nezha encounters old nemeses and must rediscover his powers to protect his loved ones.",
+    rating: 8.1,
+    genre: "Animation",
+  },
+  {
+    id: "664767",
+    imageURL: "https://image.tmdb.org/t/p/w500/4VlXER3FImHeFuUjBShFamhIp9M.jpg",
+    title: "Mortal Kombat Legends: Scorpion's Revenge",
+    summary:
+      "After the vicious slaughter of his family by stone-cold mercenary Sub-Zero, Hanzo Hasashi is exiled to the torturous Netherrealm.",
+    rating: 8.1,
+    genre: "Animation",
+  },
+  {
+    id: "103663",
+    imageURL: "https://image.tmdb.org/t/p/w500/jkixsXzRh28q3PCqFoWcf7unghT.jpg",
+    title: "The Hunt",
+    summary:
+      "A teacher lives a lonely life, struggling over his son’s custody, when a lie about him shatters his new luck.",
+    rating: 8.1,
+    genre: "Drama",
+  },
+  {
+    id: "24382",
+    imageURL: "https://image.tmdb.org/t/p/w500/f5OxD8Nl0pR3DcYHtYhHRfpsmjl.jpg",
+    title: "Big Deal on Madonna Street",
+    summary:
+      "Best friends Peppe and Mario are thieves, but they're not very good at it. Peppe thinks he's devised a master heist, but the plan has many flaws.",
+    rating: 8.1,
+    genre: "Comedy",
+  },
+  {
+    id: "20532",
+    imageURL: "https://image.tmdb.org/t/p/w500/rSlZ8iM4vRM0sZrrJNmjln4kZir.jpg",
+    title: "Sansho the Bailiff",
+    summary:
+      "In medieval Japan, a woman and her children journey to find the family's patriarch, who was exiled years before.",
+    rating: 8.1,
+    genre: "Drama",
+  },
+  {
+    id: "11878",
+    imageURL: "https://image.tmdb.org/t/p/w500/tN7kYPjRhDolpui9sc9Eq9n5b2O.jpg",
+    title: "Yojimbo",
+    summary:
+      "A nameless ronin enters a small village in feudal Japan and convinces two rival businessmen to hire him as a bodyguard.",
+    rating: 8.1,
+    genre: "Action",
   },
 ];

@@ -1,28 +1,40 @@
 import MoviesControls from "../components/MoviesControls";
 import MoviesText from "../components/MoviesText";
-import { useMovies } from "../hooks/useMovies";
+import { TEXT } from "../constants/text";
 import { useMoviesContext } from "../hooks/useMoviesContext";
+import GenreSelect from "./GenreSelect";
+import Loader from "./Loader";
 import MoviesImage from "./MoviesImage";
 
 function SwipeArea() {
-  useMovies();
-  const { current } = useMoviesContext();
-
-  const currentMovie = current;
+  const { current, movies } = useMoviesContext();
 
   return (
     <div data-testid="swipe-area" className="flex flex-col h-[100%]">
-      <section className="px-10 flex justify-center">
-        {currentMovie && <MoviesImage movie={current} />}
-      </section>
-      <div>
-        <section className="py-5">
-          {currentMovie && <MoviesText movie={current} />}
+      {movies.length != 0 && current && (
+        <>
+          <section className="px-10 flex justify-center">
+            <MoviesImage movie={current} />
+          </section>
+          <section className="py-5 flex justify-center">
+            <MoviesText movie={current} />
+          </section>
+          <div>
+            <section className="py-5 xl:py-0">
+              <MoviesControls />
+            </section>
+          </div>
+        </>
+      )}
+      {movies.length == 0 && <Loader />}
+      {!current && (
+        <section className="flex flex-col items-center justify-center gap-8">
+          <p className="text-center text-white font-roboto font-medium text-xl">
+            {TEXT.movieOut}
+          </p>
+          <GenreSelect />
         </section>
-        <section className="py-5 xl:py-0">
-          <MoviesControls />
-        </section>
-      </div>
+      )}
     </div>
   );
 }

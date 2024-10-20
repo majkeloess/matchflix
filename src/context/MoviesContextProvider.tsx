@@ -9,10 +9,14 @@ function MoviesContextProvider({ children }: { children: React.ReactNode }) {
   const [movies, setMovies] = useState<MovieType[]>([]);
   const [userList, setUserList] = useState<MovieType[]>([]);
   const [numMovies, setNumMovies] = useState<number>(0);
+  const [showList, setShowList] = useState<boolean>(false);
+  const [idBox, setIdBox] = useState(new Set<string>());
 
   return (
     <MoviesContext.Provider
       value={{
+        idBox,
+        setIdBox,
         movies,
         setMovies,
         numMovies,
@@ -25,6 +29,8 @@ function MoviesContextProvider({ children }: { children: React.ReactNode }) {
         setUserList,
         current,
         setCurrent,
+        showList,
+        setShowList,
       }}
     >
       {children}

@@ -1,24 +1,33 @@
 import { useEffect } from "react";
 import { fetchMovies } from "../utils/fetch";
 import { useMoviesContext } from "./useMoviesContext";
-import { getRandom } from "../utils/rand";
+import { shuffleMovies } from "../utils/random";
 
 export const useMovies = () => {
-  const { queryGenre, setCurrent, setNumMovies, setMovies } =
+  const { queryGenre, setCurrent, setNumMovies, setMovies, idBox } =
     useMoviesContext();
 
   useEffect(() => {
     const getMovies = async () => {
       try {
         const data = await fetchMovies(queryGenre);
-        setMovies(data);
+        const shuffledData = shuffleMovies(data);
+
+        setMovies(shuffledData);
         setNumMovies(data.length);
-        setCurrent(data[getRandom(data.length - 1)]);
+
+        setCurrent(null);
+        for (const el of shuffledData) {
+          if (!idBox.has(el.id)) {
+            setCurrent(el);
+            break;
+          }
+        }
       } catch (error) {
         console.log(error);
       }
     };
 
     getMovies();
-  }, [queryGenre, setCurrent, setNumMovies, setMovies]);
+  }, [queryGenre]);
 };
