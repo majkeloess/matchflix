@@ -1,8 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import LandingGrid from "../../../components/LandingGrid";
+import MoviesContextProvider from "../../../context/MoviesContextProvider";
 describe("LandingGrid component", () => {
   it("should render all grids elements correctly", () => {
-    render(<LandingGrid />);
+    render(
+      <MoviesContextProvider>
+        <LandingGrid />
+      </MoviesContextProvider>
+    );
 
     for (let i = 1; i < 5; i++) {
       expect(screen.getByTestId(`landing-grid-el-${i}`)).toBeInTheDocument();
@@ -10,7 +15,11 @@ describe("LandingGrid component", () => {
   });
 
   it("should render all images with correct src and alt", () => {
-    render(<LandingGrid />);
+    render(
+      <MoviesContextProvider>
+        <LandingGrid />
+      </MoviesContextProvider>
+    );
 
     for (let i = 1; i < 5; i++) {
       const img = screen.getByAltText(`ps${i}`);

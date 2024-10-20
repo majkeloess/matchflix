@@ -20,5 +20,5 @@ export const useMovies = () => {
     };
 
     getMovies();
-  }, [queryGenre]);
+  }, [queryGenre, setCurrent, setNumMovies, setMovies]);
 };
