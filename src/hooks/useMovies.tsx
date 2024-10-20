@@ -4,8 +4,7 @@ import { useMoviesContext } from "./useMoviesContext";
 import { shuffleMovies } from "../utils/random";
 
 export const useMovies = () => {
-  const { queryGenre, setCurrent, setNumMovies, setMovies, idBox } =
-    useMoviesContext();
+  const { queryGenre, setCurrent, setMovies, idBox } = useMoviesContext();
 
   useEffect(() => {
     const getMovies = async () => {
@@ -14,7 +13,6 @@ export const useMovies = () => {
         const shuffledData = shuffleMovies(data);
 
         setMovies(shuffledData);
-        setNumMovies(data.length);
 
         setCurrent(null);
         for (const el of shuffledData) {
