@@ -653,8 +653,7 @@ export const data: MovieType[] = [
   {
     id: "935",
     imageURL: "https://image.tmdb.org/t/p/w500/7SixLzxcqezkZEYU8pcHZgbkmjp.jpg",
-    title:
-      "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+    title: "Dr. Strangelove",
     summary:
       "After the insane General Jack D. Ripper initiates a nuclear strike on the Soviet Union, a war room full of politicians, generals and a Russian diplomat all frantically try to stop the nuclear strike.",
     rating: 8.1,
@@ -690,7 +689,7 @@ export const data: MovieType[] = [
   {
     id: "38288",
     imageURL: "https://image.tmdb.org/t/p/w500/y3hEulMYSTQuvmI5jBTyWrcvJQX.jpg",
-    title: "“The Shorts” by Aldo, Giovanni and Giacomo",
+    title: "The Shorts",
     summary:
       "I Corti ('Shorts') by Aldo, Giovanni & Giacomo was the first stage show of the comedy trio, with the participation of Marina Massironi. It was recorded live at the Teatro Nuovo in Ferrara on 28 and 29 March 1996.",
     rating: 8.1,
@@ -785,5 +784,95 @@ export const data: MovieType[] = [
       "A nameless ronin enters a small village in feudal Japan and convinces two rival businessmen to hire him as a bodyguard.",
     rating: 8.1,
     genre: "Action",
+  },
+  {
+    id: "823754",
+    imageURL: "https://image.tmdb.org/t/p/w500/ku1UvTWYvhFQbSesOD6zteY7bXT.jpg",
+    title: "Bo Burnham: Inside",
+    summary:
+      "Stuck in COVID-19 lockdown, US comedian and musician Bo Burnham attempts to stay sane and happy by writing, shooting and performing a one-man comedy special.",
+    rating: 8.1,
+    genre: "Comedy",
+  },
+  {
+    id: "7347",
+    imageURL: "https://image.tmdb.org/t/p/w500/lwIXz785N2fXi8hsBr1IXciFlkM.jpg",
+    title: "Elite Squad",
+    summary:
+      "In 1997, before the visit of the pope to Rio de Janeiro, Captain Nascimento from BOPE (Special Police Operations Battalion) is assigned to eliminate the risks of the drug dealers in a dangerous slum nearby where the pope intends to be lodged.",
+    rating: 8.1,
+    genre: "Drama",
+  },
+  {
+    id: "120467",
+    imageURL: "https://image.tmdb.org/t/p/w500/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg",
+    title: "The Grand Budapest Hotel",
+    summary:
+      "The Grand Budapest Hotel tells of a legendary concierge at a famous European hotel between the wars and his friendship with a young employee who becomes his trusted protégé. The story involves the theft and recovery of a priceless Renaissance painting, the battle for an enormous family fortune and the slow and then sudden upheavals that transformed Europe during the first half of the 20th century.",
+    rating: 8.0,
+    genre: "Comedy",
+  },
+  {
+    id: "821",
+    imageURL: "https://image.tmdb.org/t/p/w500/b6vYatvui1EXeFYfpDX4rcbueuP.jpg",
+    title: "Judgment at Nuremberg",
+    summary:
+      "In 1947, four German judges who served on the bench during the Nazi regime face a military tribunal to answer charges of crimes against humanity. Chief Justice Haywood hears evidence and testimony not only from lead defendant Ernst Janning and his defense attorney Hans Rolfe, but also from the widow of a Nazi general, an idealistic U.S. Army captain and reluctant witness Irene Wallner.",
+    rating: 8.0,
+    genre: "Drama",
+  },
+  {
+    id: "785534",
+    imageURL: "https://image.tmdb.org/t/p/w500/cmru6N6Hnw2pJwuo1ctH1CxKqKZ.jpg",
+    title: "Paper Lives",
+    summary:
+      "In the streets of Istanbul, ailing waste warehouse worker Mehmet takes a small boy under his wing and must soon confront his own traumatic childhood.",
+    rating: 8.0,
+    genre: "Drama",
+  },
+  {
+    id: "800",
+    imageURL: "https://image.tmdb.org/t/p/w500/cDCvmYoyqFg4CuSMtGMvCpfOIEw.jpg",
+    title: "The Young and the Damned",
+    summary:
+      "A group of juvenile delinquents live a violent life in the infamous slums of Mexico City; among them Pedro, whose morality is gradually corrupted and destroyed by the others.",
+    rating: 8.0,
+    genre: "Drama",
+  },
+  {
+    id: "1000492",
+    imageURL: "https://image.tmdb.org/t/p/w500/zIgyDGsmIyMAf0ppg7QKTuIM1He.jpg",
+    title: "All Your Faces",
+    summary:
+      "Since 2014, France's restorative justice programmes have offered a safe space for supervised dialogue between offenders and victims. Grégoire, Nawelle, and Sabine, victims of heists and violent robberies, agree to join one of these discussion groups alongside offenders Nassim, Issa, and Thomas, all convicted of violent robberies.",
+    rating: 8.0,
+    genre: "Drama",
+  },
+  {
+    id: "538362",
+    imageURL: "https://image.tmdb.org/t/p/w500/rwPgE6fLxuJmPWi8fFjgENJMAjr.jpg",
+    title: "On My Skin",
+    summary:
+      "The incredible true story behind the most controversial Italian court cases in recent years. Stefano Cucchi was arrested for a minor crime and mysteriously found dead during his detention.",
+    rating: 8.0,
+    genre: "Drama",
+  },
+  {
+    id: "310569",
+    imageURL: "https://image.tmdb.org/t/p/w500/u1tDQun2iJAzersd94S8P47WEOL.jpg",
+    title: "The Second Mother",
+    summary:
+      "After leaving her daughter Jessica in a small town in Pernambuco to be raised by relatives, Val spends the next 13 years working as a nanny to Fabinho in São Paulo. She has financial stability but has to live with the guilt of having not raised Jessica herself.",
+    rating: 8.0,
+    genre: "Drama",
+  },
+  {
+    id: "147",
+    imageURL: "https://image.tmdb.org/t/p/w500/12PuU23kkDLvTd0nb8hMlE3oShB.jpg",
+    title: "The 400 Blows",
+    summary:
+      "For young Parisian boy Antoine Doinel, life is one difficult situation after another. Surrounded by inconsiderate adults, including his neglectful parents, Antoine spends his days with his best friend, Rene, trying to plan for a better life.",
+    rating: 8.0,
+    genre: "Drama",
   },
 ];

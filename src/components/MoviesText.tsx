@@ -5,7 +5,7 @@ function MoviesText({ movie }: { movie: MovieType }) {
   return (
     <div
       data-testid="movies-text"
-      className="md:px-10 px-4 md:w-[600px] w-[90dvw] h-[100px]"
+      className="md:px-10 px-4 md:w-[600px] w-[90dvw] h-[80px] md:h-[100px]"
     >
       <div className="flex flex-row justify-between items-start">
         <div className="pr-5">
