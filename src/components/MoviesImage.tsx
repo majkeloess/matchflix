@@ -8,7 +8,7 @@ function MoviesImage({ movie }: { movie: MovieType }) {
     <div
       data-testid="movies-image"
       onClick={() => setOpenSummary(true)}
-      className="rounded-2xl w-[60dvw] md:w-[40dvw] xl:max-h-[50dvh] max-h-[40dvh] h-[40dvh] xl:max-w-[30dvh] overflow-hidden border-pk border-4"
+      className="rounded-2xl w-[60dvw] md:w-[40dvw] xl:max-h-[50dvh] max-h-[40dvh] h-[60dvh] xl:max-w-[30dvh] overflow-hidden border-pk border-4"
     >
       {!openSummary ? (
         <img

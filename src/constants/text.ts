@@ -14,6 +14,7 @@ export const TEXT = {
   movieAll: "All",
   movieSummary: "Summary",
   movieOut: "You are out of cards. Filter by other genre.",
+  listEmpty: "List is currently empty.",
 };
 
 export const genres: Genre[] = [
