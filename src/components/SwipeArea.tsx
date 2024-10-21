@@ -11,7 +11,7 @@ function SwipeArea() {
   const { current, movies } = useMoviesContext();
 
   return (
-    <div data-testid="swipe-area" className="flex flex-col h-[100%] md:mt-10">
+    <div data-testid="swipe-area" className="flex flex-col h-[100%] md:mt-20">
       {movies.length != 0 && current && (
         <>
           <section className="px-10 flex justify-center">
