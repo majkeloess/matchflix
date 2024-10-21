@@ -27,5 +27,6 @@ export const useMovies = () => {
     };
 
     getMovies();
+    /* eslint-disable-next-line */
   }, [queryGenre]);
 };
