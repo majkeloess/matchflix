@@ -2,16 +2,17 @@ import { render, screen } from "@testing-library/react";
 import MoviesPage from "../../../pages/MoviesPage";
 import { HashRouter } from "react-router-dom";
 import { TEXT } from "../../../constants/text";
-import MoviesContextProvider from "../../../context/MoviesContextProvider";
 import { act } from "react";
+import { Provider } from "react-redux";
+import store from "../../../redux/store";
 
 describe("MoviesPage component", () => {
   it("should render your watch list text correctly", async () => {
     await act(async () => {
       render(
-        <MoviesContextProvider>
+        <Provider store={store}>
           <MoviesPage />
-        </MoviesContextProvider>,
+        </Provider>,
         { wrapper: HashRouter }
       );
     });
@@ -23,9 +24,9 @@ describe("MoviesPage component", () => {
   it("should render SwipeArea component", async () => {
     await act(async () => {
       render(
-        <MoviesContextProvider>
+        <Provider store={store}>
           <MoviesPage />
-        </MoviesContextProvider>,
+        </Provider>,
         { wrapper: HashRouter }
       );
     });
@@ -35,9 +36,9 @@ describe("MoviesPage component", () => {
   it("should render ListList component", async () => {
     await act(async () => {
       render(
-        <MoviesContextProvider>
+        <Provider store={store}>
           <MoviesPage />
-        </MoviesContextProvider>,
+        </Provider>,
         { wrapper: HashRouter }
       );
     });

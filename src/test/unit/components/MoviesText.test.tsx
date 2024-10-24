@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import { mockData } from "../../../constants/exampleData";
-import MoviesContextProvider from "../../../context/MoviesContextProvider";
 import MoviesText from "../../../components/MoviesText";
-
+import { Provider } from "react-redux";
+import store from "../../../redux/store";
 describe("MoviesText component", () => {
   it("should render movie title correctly", () => {
     render(
-      <MoviesContextProvider>
+      <Provider store={store}>
         <MoviesText movie={mockData} />
-      </MoviesContextProvider>
+      </Provider>
     );
 
     expect(
@@ -17,9 +17,9 @@ describe("MoviesText component", () => {
   });
   it("should render genre title correctly", () => {
     render(
-      <MoviesContextProvider>
+      <Provider store={store}>
         <MoviesText movie={mockData} />
-      </MoviesContextProvider>
+      </Provider>
     );
     expect(
       screen.getByText((c) => c.includes(mockData.genre))
@@ -27,9 +27,9 @@ describe("MoviesText component", () => {
   });
   it("should render movie rating correctly", () => {
     render(
-      <MoviesContextProvider>
+      <Provider store={store}>
         <MoviesText movie={mockData} />
-      </MoviesContextProvider>
+      </Provider>
     );
     expect(
       screen.getByText((c) => c.includes(mockData.rating + "/10"))

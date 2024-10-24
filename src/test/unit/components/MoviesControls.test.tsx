@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import { HashRouter } from "react-router-dom";
 import GenreSelect from "../../../components/GenreSelect";
-import MoviesContextProvider from "../../../context/MoviesContextProvider";
-
+import store from "../../../redux/store";
+import { Provider } from "react-redux";
 describe("MoviesControls component", () => {
   it("should render GenreSelect", () => {
     render(
-      <MoviesContextProvider>
+      <Provider store={store}>
         <GenreSelect />
-      </MoviesContextProvider>,
+      </Provider>,
       { wrapper: HashRouter }
     );
     expect(screen.getByTestId("select")).toBeInTheDocument();

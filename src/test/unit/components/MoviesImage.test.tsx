@@ -1,14 +1,15 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import MoviesImage from "../../../components/MoviesImage";
 import { mockData } from "../../../constants/exampleData";
-import MoviesContextProvider from "../../../context/MoviesContextProvider";
+import { Provider } from "react-redux";
+import store from "../../../redux/store";
 
 describe("MoviesImage component", () => {
   it("should open modal when the image is clicked", () => {
     render(
-      <MoviesContextProvider>
+      <Provider store={store}>
         <MoviesImage movie={mockData} />
-      </MoviesContextProvider>
+      </Provider>
     );
 
     const img = screen.getByTestId("movies-image");

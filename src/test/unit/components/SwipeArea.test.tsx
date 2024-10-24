@@ -1,16 +1,17 @@
 import { render } from "@testing-library/react";
 import SwipeArea from "../../../components/SwipeArea";
 import { HashRouter } from "react-router-dom";
-import MoviesContextProvider from "../../../context/MoviesContextProvider";
 import { act } from "react";
+import { Provider } from "react-redux";
+import store from "../../../redux/store";
 
 describe("SwipeArea component", () => {
   it("should render MoviesControls component", async () => {
     await act(async () => {
       render(
-        <MoviesContextProvider>
+        <Provider store={store}>
           <SwipeArea />
-        </MoviesContextProvider>,
+        </Provider>,
         { wrapper: HashRouter }
       );
     });

@@ -2,13 +2,14 @@ import { render, screen } from "@testing-library/react";
 import { HashRouter } from "react-router-dom";
 import GenreSelect from "../../../components/GenreSelect";
 import { genres, TEXT } from "../../../constants/text";
-import MoviesContextProvider from "../../../context/MoviesContextProvider";
+import { Provider } from "react-redux";
+import store from "../../../redux/store";
 describe("GenreSelect component", () => {
   it("should render All text correctly", () => {
     render(
-      <MoviesContextProvider>
+      <Provider store={store}>
         <GenreSelect />
-      </MoviesContextProvider>,
+      </Provider>,
       { wrapper: HashRouter }
     );
     expect(
@@ -18,9 +19,9 @@ describe("GenreSelect component", () => {
 
   it("should render all genres correctly", () => {
     render(
-      <MoviesContextProvider>
+      <Provider store={store}>
         <GenreSelect />
-      </MoviesContextProvider>,
+      </Provider>,
       { wrapper: HashRouter }
     );
     genres.forEach((genre) => {

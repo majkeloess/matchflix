@@ -1,12 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import LandingGrid from "../../../components/LandingGrid";
-import MoviesContextProvider from "../../../context/MoviesContextProvider";
+import { Provider } from "react-redux";
+import store from "../../../redux/store";
 describe("LandingGrid component", () => {
   it("should render all grids elements correctly", () => {
     render(
-      <MoviesContextProvider>
+      <Provider store={store}>
         <LandingGrid />
-      </MoviesContextProvider>
+      </Provider>
     );
 
     for (let i = 1; i < 5; i++) {
@@ -16,9 +17,9 @@ describe("LandingGrid component", () => {
 
   it("should render all images with correct src and alt", () => {
     render(
-      <MoviesContextProvider>
+      <Provider store={store}>
         <LandingGrid />
-      </MoviesContextProvider>
+      </Provider>
     );
 
     for (let i = 1; i < 5; i++) {

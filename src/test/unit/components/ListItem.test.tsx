@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import ListItem from "../../../components/ListItem";
 import { mockData } from "../../../constants/exampleData";
-import MoviesContextProvider from "../../../context/MoviesContextProvider";
-
+import { Provider } from "react-redux";
+import store from "../../../redux/store";
 describe("ListItem Component", () => {
   it("should render list item", () => {
     render(
-      <MoviesContextProvider>
+      <Provider store={store}>
         <ListItem movie={mockData} />
-      </MoviesContextProvider>
+      </Provider>
     );
 
     expect(screen.getByTestId("list-item")).toBeInTheDocument();
@@ -16,9 +16,9 @@ describe("ListItem Component", () => {
 
   it("should render movie data correctly", () => {
     render(
-      <MoviesContextProvider>
+      <Provider store={store}>
         <ListItem movie={mockData} />
-      </MoviesContextProvider>
+      </Provider>
     );
 
     const titleElement = screen.getByText(/Inception/i);
