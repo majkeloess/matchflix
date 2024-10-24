@@ -25,18 +25,28 @@ export type MovieType = {
 
 export type MoviesContextType = {
   last: MovieType | null;
-  setLast: React.Dispatch<React.SetStateAction<MovieType | null>>;
   queryGenre: string;
-  setQueryGenre: React.Dispatch<React.SetStateAction<string>>;
   userList: MovieType[];
-  setUserList: React.Dispatch<React.SetStateAction<MovieType[]>>;
   movies: MovieType[];
-  setMovies: React.Dispatch<React.SetStateAction<MovieType[]>>;
-  current: MovieType | null;
-  setCurrent: React.Dispatch<React.SetStateAction<MovieType | null>>;
-
   showList: boolean;
-  setShowList: React.Dispatch<React.SetStateAction<boolean>>;
+  current: MovieType | null;
   idBox: Set<string>;
+
+  setLast: React.Dispatch<React.SetStateAction<MovieType | null>>;
+  setUserList: React.Dispatch<React.SetStateAction<MovieType[]>>;
+  setQueryGenre: React.Dispatch<React.SetStateAction<string>>;
+  setMovies: React.Dispatch<React.SetStateAction<MovieType[]>>;
+  setCurrent: React.Dispatch<React.SetStateAction<MovieType | null>>;
+  setShowList: React.Dispatch<React.SetStateAction<boolean>>;
   setIdBox: React.Dispatch<React.SetStateAction<Set<string>>>;
+};
+
+export type MoviesState = {
+  last: MovieType | null;
+  queryGenre: string;
+  userList: MovieType[];
+  movies: MovieType[];
+  showList: boolean;
+  current: MovieType | null;
+  idBox: Set<string>;
 };

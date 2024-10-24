@@ -4,11 +4,15 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./utils/router";
 import "./styles/index.css";
 import MoviesContextProvider from "./context/MoviesContextProvider";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <MoviesContextProvider>
-      <RouterProvider router={router} />
-    </MoviesContextProvider>
+    <Provider store={store}>
+      <MoviesContextProvider>
+        <RouterProvider router={router} />
+      </MoviesContextProvider>
+    </Provider>
   </StrictMode>
 );
