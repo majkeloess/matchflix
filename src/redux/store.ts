@@ -1,4 +1,9 @@
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import { movieReducer } from "./reducers";
+import { rootSaga, sagaMiddleware } from "./sagas";
 
-export const store = createStore(movieReducer);
+const store = createStore(movieReducer, applyMiddleware(sagaMiddleware));
+
+sagaMiddleware.run(rootSaga);
+
+export default store;

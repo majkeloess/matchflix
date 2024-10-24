@@ -4,11 +4,13 @@ import SwipeArea from "../components/SwipeArea";
 import ListList from "../components/ListList";
 import { useMovies } from "../hooks/useMovies";
 import ListHeader from "../components/ListHeader";
-import { useMoviesContext } from "../hooks/useMoviesContext";
+import { useSelector } from "react-redux";
+import { MoviesState } from "../constants/types";
 
 function MoviesPage() {
   useMovies();
-  const { showList } = useMoviesContext();
+
+  const showList = useSelector((selector: MoviesState) => selector.showList);
 
   return (
     <PageWrapper>

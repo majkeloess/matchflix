@@ -5,3 +5,4 @@ export const SET_MOVIES = "SET_MOVIES";
 export const SET_USER_LIST = "SET_USER_LIST";
 export const SET_SHOW_LIST = "SET_SHOW_LIST";
 export const SET_ID_BOX = "SET_ID_BOX";
+export const FETCH_MOVIES_REQUEST = "FETCH_MOVIES_REQUEST";

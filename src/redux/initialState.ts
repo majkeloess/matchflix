@@ -1,4 +1,6 @@
-export const initialState = {
+import { MoviesState } from "../constants/types";
+
+export const initialState: MoviesState = {
   last: null,
   queryGenre: "all",
   userList: [],

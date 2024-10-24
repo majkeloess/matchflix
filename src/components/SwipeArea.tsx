@@ -1,14 +1,20 @@
+import { useSelector } from "react-redux";
 import MoviesControls from "../components/MoviesControls";
 import MoviesText from "../components/MoviesText";
 import { TEXT } from "../constants/text";
-import { useMoviesContext } from "../hooks/useMoviesContext";
 import ControlList from "./ControlList";
 import GenreSelect from "./GenreSelect";
 import Loader from "./Loader";
 import MoviesImage from "./MoviesImage";
+import { MoviesState } from "../constants/types";
 
 function SwipeArea() {
-  const { current, movies } = useMoviesContext();
+  const { movies, current } = useSelector((selector: MoviesState) => ({
+    movies: selector.movies,
+    current: selector.current,
+  }));
+
+  console.log(movies.length);
 
   return (
     <div data-testid="swipe-area" className="flex flex-col h-[100%] md:mt-20">

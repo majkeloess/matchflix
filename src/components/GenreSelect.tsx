@@ -1,11 +1,16 @@
+import { useDispatch, useSelector } from "react-redux";
 import { genres, TEXT } from "../constants/text";
-import { useMoviesContext } from "../hooks/useMoviesContext";
+import { MoviesState } from "../constants/types";
+import { setQueryGenre } from "../redux/actions";
 
 function GenreSelect() {
-  const { setQueryGenre, queryGenre } = useMoviesContext();
+  const queryGenre = useSelector(
+    (selector: MoviesState) => selector.queryGenre
+  );
+  const dispatch = useDispatch();
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setQueryGenre(event.target.value);
+    dispatch(setQueryGenre(event.target.value));
   };
 
   return (

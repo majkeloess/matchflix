@@ -1,39 +1,42 @@
+import { useDispatch, useSelector } from "react-redux";
 import PlaySvg from "../assets/svg/PlaySvg";
-import { useMoviesContext } from "../hooks/useMoviesContext";
 import { shuffleMovies } from "../utils/random";
 import { updateRecommendation } from "../utils/update";
+import { MoviesState } from "../constants/types";
+import { setCurrent, setIdBox, setLast, setUserList } from "../redux/actions";
 
 function ControlAccept() {
-  const {
-    idBox,
-    setIdBox,
-    current,
-    setCurrent,
-    setLast,
-    movies,
-    userList,
-    setUserList,
-  } = useMoviesContext();
+  const { current, movies, idBox, userList } = useSelector(
+    (selector: MoviesState) => ({
+      current: selector.current,
+      idBox: selector.idBox,
+      movies: selector.movies,
+      userList: selector.userList,
+    })
+  );
+
+  const dispatch = useDispatch();
+
   const handleAcceptRecommendation = async () => {
     if (current) {
       await updateRecommendation(current.id, true);
 
       idBox.add(current.id);
-      setIdBox(idBox);
+      dispatch(setIdBox(idBox));
 
-      setLast(current);
+      dispatch(setLast(current));
 
       const shuffledMovies = shuffleMovies(movies);
 
-      setCurrent(null);
+      dispatch(setCurrent(null));
       for (const el of shuffledMovies) {
         if (!idBox.has(el.id)) {
-          setCurrent(el);
+          dispatch(setCurrent(el));
           break;
         }
       }
 
-      setUserList([...userList, current]);
+      dispatch(setUserList([...userList, current]));
     }
   };
   return (

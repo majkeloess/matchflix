@@ -1,10 +1,12 @@
+import { useSelector } from "react-redux";
 import { TEXT } from "../constants/text";
-import { useMoviesContext } from "../hooks/useMoviesContext";
 import ListItem from "./ListItem";
 import { Carousel } from "flowbite-react";
+import { MoviesState } from "../constants/types";
 
 function ListList() {
-  const { userList } = useMoviesContext();
+  const userList = useSelector((selector: MoviesState) => selector.userList);
+
   return (
     <div
       data-testd="list"

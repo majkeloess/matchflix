@@ -1,4 +1,5 @@
 import {
+  FETCH_MOVIES_REQUEST,
   SET_CURRENT,
   SET_ID_BOX,
   SET_LAST,
@@ -51,39 +52,44 @@ export type MoviesContextType = {
   setIdBox: React.Dispatch<React.SetStateAction<Set<string>>>;
 };
 
-type SetLastAction = {
+export type SetLastAction = {
   type: typeof SET_LAST;
   payload: null | MovieType;
 };
 
-type SetCurrentAction = {
+export type SetCurrentAction = {
   type: typeof SET_CURRENT;
   payload: null | MovieType;
 };
 
-type SetQueryGenreAction = {
+export type SetQueryGenreAction = {
   type: typeof SET_QUERY_GENRE;
   payload: string;
 };
 
-type SetMoviesAction = {
+export type SetMoviesAction = {
   type: typeof SET_MOVIES;
   payload: MovieType[];
 };
 
-type SetUserListAction = {
+export type SetUserListAction = {
   type: typeof SET_USER_LIST;
   payload: MovieType[];
 };
 
-type SetShowListAction = {
+export type SetShowListAction = {
   type: typeof SET_SHOW_LIST;
   payload: boolean;
 };
 
-type SetIdBoxAction = {
+export type SetIdBoxAction = {
   type: typeof SET_ID_BOX;
   payload: Set<string>;
+};
+
+export type FetchMoviesRequest = {
+  type: typeof FETCH_MOVIES_REQUEST;
+  payload: string;
 };
 
 export type MovieActions =

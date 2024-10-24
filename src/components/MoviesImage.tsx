@@ -1,29 +1,38 @@
 import { useState } from "react";
-import { MovieType } from "../constants/types";
-import { motion } from "framer-motion";
+import { MoviesState, MovieType } from "../constants/types";
 import { updateRecommendation } from "../utils/update";
-import { useMoviesContext } from "../hooks/useMoviesContext";
 import { shuffleMovies } from "../utils/random";
+import { useDispatch, useSelector } from "react-redux";
+import { setCurrent, setIdBox, setLast } from "../redux/actions";
+import { motion } from "framer-motion";
 
 function MoviesImage({ movie }: { movie: MovieType }) {
   const [openSummary, setOpenSummary] = useState(false);
-  const { current, setCurrent, setLast, movies, idBox, setIdBox } =
-    useMoviesContext();
+
+  const { current, movies, idBox } = useSelector((selector: MoviesState) => ({
+    current: selector.current,
+    idBox: selector.idBox,
+    movies: selector.movies,
+  }));
+
+  const dispatch = useDispatch();
+
   const handleRejectRecommendation = async () => {
     if (current) {
       await updateRecommendation(current.id, false);
 
       idBox.add(current.id);
-      setIdBox(idBox);
 
-      setLast(current);
+      dispatch(setIdBox(idBox));
+      dispatch(setLast(current));
 
       const shuffledMovies = shuffleMovies(movies);
 
-      setCurrent(null);
+      dispatch(setCurrent(null));
+
       for (const el of shuffledMovies) {
         if (!idBox.has(el.id)) {
-          setCurrent(el);
+          dispatch(setCurrent(el));
           break;
         }
       }
