@@ -1,3 +1,4 @@
+import { MovieActions } from "../constants/types";
 import {
   SET_CURRENT,
   SET_ID_BOX,
@@ -9,10 +10,7 @@ import {
 } from "./actionsTypes";
 import { initialState } from "./initialState";
 
-export const movieReducer = (
-  state = initialState,
-  action: { type: string; payload: any }
-) => {
+export const movieReducer = (state = initialState, action: MovieActions) => {
   if (action.payload == SET_LAST) {
     return {
       ...state,

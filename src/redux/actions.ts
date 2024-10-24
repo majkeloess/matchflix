@@ -9,12 +9,12 @@ import {
   SET_USER_LIST,
 } from "./actionsTypes";
 
-export const setLast = (last: MovieType) => ({
+export const setLast = (last: MovieType | null) => ({
   type: SET_LAST,
   payload: last,
 });
 
-export const setCurrent = (current: MovieType) => ({
+export const setCurrent = (current: MovieType | null) => ({
   type: SET_CURRENT,
   payload: current,
 });
@@ -39,7 +39,7 @@ export const setShowList = (showList: boolean) => ({
   payload: showList,
 });
 
-export const setIdBox = (idBox: Set<String>) => ({
+export const setIdBox = (idBox: Set<string>) => ({
   type: SET_ID_BOX,
   payload: idBox,
 });

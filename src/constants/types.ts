@@ -1,3 +1,13 @@
+import {
+  SET_CURRENT,
+  SET_ID_BOX,
+  SET_LAST,
+  SET_MOVIES,
+  SET_QUERY_GENRE,
+  SET_SHOW_LIST,
+  SET_USER_LIST,
+} from "../redux/actionsTypes";
+
 export type Genre =
   | "Action"
   | "Animation"
@@ -40,6 +50,50 @@ export type MoviesContextType = {
   setShowList: React.Dispatch<React.SetStateAction<boolean>>;
   setIdBox: React.Dispatch<React.SetStateAction<Set<string>>>;
 };
+
+type SetLastAction = {
+  type: typeof SET_LAST;
+  payload: null | MovieType;
+};
+
+type SetCurrentAction = {
+  type: typeof SET_CURRENT;
+  payload: null | MovieType;
+};
+
+type SetQueryGenreAction = {
+  type: typeof SET_QUERY_GENRE;
+  payload: string;
+};
+
+type SetMoviesAction = {
+  type: typeof SET_MOVIES;
+  payload: MovieType[];
+};
+
+type SetUserListAction = {
+  type: typeof SET_USER_LIST;
+  payload: MovieType[];
+};
+
+type SetShowListAction = {
+  type: typeof SET_SHOW_LIST;
+  payload: boolean;
+};
+
+type SetIdBoxAction = {
+  type: typeof SET_ID_BOX;
+  payload: Set<string>;
+};
+
+export type MovieActions =
+  | SetLastAction
+  | SetCurrentAction
+  | SetQueryGenreAction
+  | SetMoviesAction
+  | SetUserListAction
+  | SetShowListAction
+  | SetIdBoxAction;
 
 export type MoviesState = {
   last: MovieType | null;
