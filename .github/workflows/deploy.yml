@@ -27,6 +27,8 @@ jobs:
         run: npm run test-prod
 
       - name: Build project
+              env:
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
         run: npm run build
 
       - name: Upload production-ready build files

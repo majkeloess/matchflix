@@ -16,9 +16,9 @@ function ControlReject() {
 
   const handleRejectRecommendation = async () => {
     if (current) {
-      await updateRecommendation(current.id, false);
+      await updateRecommendation(current.movie_id, false);
 
-      idBox.add(current.id);
+      idBox.add(current.movie_id);
 
       dispatch(setIdBox(idBox));
       dispatch(setLast(current));
@@ -28,7 +28,7 @@ function ControlReject() {
       dispatch(setCurrent(null));
 
       for (const el of shuffledMovies) {
-        if (!idBox.has(el.id)) {
+        if (!idBox.has(el.movie_id)) {
           dispatch(setCurrent(el));
           break;
         }

@@ -1,13 +1,17 @@
 export async function updateRecommendation(id: string, isAccepted: boolean) {
-  //const url = `https://api.example/recommendations/${id}`;
-  //const PUT = "PUT";
+  const url = `https://api.majkeloess.dev/matchflix/recommendations/${id}`;
 
-  // "Assume you have a backend", if it is real world scenario try/catch also
+  const POST = "POST";
+
   if (isAccepted) {
-    // fetch(`${url}/accept`, { method: PUT });
+    fetch(`${url}/accepted?key=${import.meta.env.VITE_API_KEY}`, {
+      method: POST,
+    });
     console.log(`Recommendation accepted: ${id}`);
   } else {
-    //fetch(`${url}/reject`, { method: PUT });
+    fetch(`${url}/rejected?key=${import.meta.env.VITE_API_KEY}`, {
+      method: POST,
+    });
     console.log(`Recommendation rejected: ${id}`);
   }
 }

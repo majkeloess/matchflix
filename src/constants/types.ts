@@ -26,8 +26,8 @@ export type Genre =
   | "Science Fiction";
 
 export type MovieType = {
-  id: string;
-  imageURL: string;
+  movie_id: string;
+  imageurl: string;
   title: string;
   summary: string;
   rating: number;

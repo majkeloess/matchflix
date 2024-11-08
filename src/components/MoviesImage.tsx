@@ -19,9 +19,9 @@ function MoviesImage({ movie }: { movie: MovieType }) {
 
   const handleRejectRecommendation = async () => {
     if (current) {
-      await updateRecommendation(current.id, false);
+      await updateRecommendation(current.movie_id, false);
 
-      idBox.add(current.id);
+      idBox.add(current.movie_id);
 
       dispatch(setIdBox(idBox));
       dispatch(setLast(current));
@@ -31,7 +31,7 @@ function MoviesImage({ movie }: { movie: MovieType }) {
       dispatch(setCurrent(null));
 
       for (const el of shuffledMovies) {
-        if (!idBox.has(el.id)) {
+        if (!idBox.has(el.movie_id)) {
           dispatch(setCurrent(el));
           break;
         }
@@ -51,7 +51,7 @@ function MoviesImage({ movie }: { movie: MovieType }) {
       {!openSummary ? (
         <img
           draggable="false"
-          src={movie.imageURL}
+          src={movie.imageurl}
           alt="poster"
           className="w-full h-full object-cover"
         />

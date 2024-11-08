@@ -13,6 +13,6 @@ const mockData = {
 describe("Data fetching", () => {
   it("should fetch movies", async () => {
     const data = await fetchMovies("horror");
-    expect(data[0].id).toBe(mockData.id);
+    expect(data[0].movie_id).toBe(mockData.id);
   });
 });

@@ -19,9 +19,9 @@ function ControlAccept() {
 
   const handleAcceptRecommendation = async () => {
     if (current) {
-      await updateRecommendation(current.id, true);
+      await updateRecommendation(current.movie_id, true);
 
-      idBox.add(current.id);
+      idBox.add(current.movie_id);
       dispatch(setIdBox(idBox));
 
       dispatch(setLast(current));
@@ -30,7 +30,7 @@ function ControlAccept() {
 
       dispatch(setCurrent(null));
       for (const el of shuffledMovies) {
-        if (!idBox.has(el.id)) {
+        if (!idBox.has(el.movie_id)) {
           dispatch(setCurrent(el));
           break;
         }

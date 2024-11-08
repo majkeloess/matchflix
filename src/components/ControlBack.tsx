@@ -20,10 +20,12 @@ function ControlBack() {
 
   const handleComeback = () => {
     if (last) {
-      const updatedList = userList.filter((movie) => movie.id != last.id);
+      const updatedList = userList.filter(
+        (movie) => movie.movie_id != last.movie_id
+      );
       dispatch(setUserList(updatedList));
 
-      idBox.delete(last.id);
+      idBox.delete(last.movie_id);
       dispatch(setIdBox(idBox));
 
       dispatch(setCurrent(last));

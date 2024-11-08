@@ -14,8 +14,6 @@ function SwipeArea() {
     current: selector.current,
   }));
 
-  console.log(movies.length);
-
   return (
     <div data-testid="swipe-area" className="flex flex-col h-[100%] md:mt-20">
       {movies.length != 0 && current && (
