@@ -4,12 +4,12 @@ export async function updateRecommendation(id: string, isAccepted: boolean) {
   const POST = "POST";
 
   if (isAccepted) {
-    fetch(`${url}/accepted?key=${import.meta.env.VITE_API_KEY}`, {
+    fetch(`${url}/accepted?key=${process.env.VITE_API_KEY}`, {
       method: POST,
     });
     console.log(`Recommendation accepted: ${id}`);
   } else {
-    fetch(`${url}/rejected?key=${import.meta.env.VITE_API_KEY}`, {
+    fetch(`${url}/rejected?key=${process.env.VITE_API_KEY}`, {
       method: POST,
     });
     console.log(`Recommendation rejected: ${id}`);

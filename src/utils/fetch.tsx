@@ -2,9 +2,7 @@ import { MovieType } from "../constants/types";
 
 export async function fetchMovies(genre: string) {
   const response = await fetch(
-    `https://api.majkeloess.dev/matchflix/recommendations?key=${
-      import.meta.env.VITE_API_KEY
-    }`
+    `https://api.majkeloess.dev/matchflix/recommendations?key=${process.env.VITE_API_KEY}`
   );
   const movies: MovieType[] = await response.json();
 

@@ -9,7 +9,7 @@ function ListItem({ movie }: { movie: MovieType }) {
       <div>
         <div className="rounded-2xl overflow-hidden md:w-40 md:h-60  ">
           <img
-            src={movie.imageURL}
+            src={movie.imageurl}
             alt="poster"
             className="w-full h-full object-cover"
           />

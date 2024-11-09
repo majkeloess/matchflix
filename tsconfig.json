@@ -4,13 +4,14 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "module": "esnext",
-    "target": "es6",
+    "target": "es2020",
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
   },
   "include": ["src/**/*", "src/jest-dom.d.ts"],
   "exclude": ["node_modules"]
